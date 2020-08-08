@@ -25,12 +25,12 @@ header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+    z-index: 9999;
     /* background-image: url("../images/hero-bg.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-position: 80%; */
-    z-index: 9999;
 }
 
 header h1{
@@ -90,7 +90,18 @@ footer h2 {
 }
 /* END Footer styles */
 
+/* START About Me styles */
 
+
+.about-img{
+    width: 200px;
+}
+/* END About Me styles */
+
+/* START Work styles */
+.work-img {
+    width: 200px;
+}
 
 /* Media Query for Smaller Desktop Scrrens and Smaller */
 @media screen and (max-width: 980px){
@@ -98,7 +109,7 @@ footer h2 {
         padding-bottom: 0;
         justify-content: center;
     }
-
+    /* Stack header and nav vertically for screens 980px wide and below */
     header h1 {
         width: 100%;
         text-align: center;
@@ -113,7 +124,7 @@ footer h2 {
     header nav ul li a {
         font-size: 20px;
     }
-
+    /* Center align footer for screens 980px wide and below */
     footer h2 {
         text-align: center;
         width: 100%;
@@ -122,6 +133,7 @@ footer h2 {
 
 /* Media Query for Tablets and Smaller */
 @media screen and (max-width: 768px){
+    /* Remove sticky header for screens 768px wide and below */
     header {
         position: relative;
     }
@@ -133,8 +145,6 @@ footer h2 {
 
 /* Media Query for Mobile Phones and Smaller */
 @media screen and (max-width: 575px){
-    .section-title {
-        width: 95%;
-    }
+
 }
 
