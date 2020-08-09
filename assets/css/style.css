@@ -26,11 +26,6 @@ header {
     position: -webkit-sticky;
     top: 0;
     z-index: 9999;
-    /* background-image: url("../images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-position: 80%; */
 }
 
 header h1{
@@ -92,7 +87,7 @@ footer h2 {
 
 /* START Section styels */
 .portfolio-wrapper {
-    margin: 10px;
+    margin: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -109,7 +104,12 @@ footer h2 {
 .content-wrapper {
     /* Give section content 80% vp width */
     flex: 12 80%;
-    margin-top: 20px;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary-color);
+}
+
+#contact-me .content-wrapper{
+    line-height: 1.5;
 }
 
 /* START About Me styles */
@@ -140,12 +140,14 @@ footer h2 {
 /* START Work styles */
 .grid-container {
     display: grid;
+    /* create a 3 by 3 grid */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
 .work-img-wrapper {
     grid-column: span 1;
+    position: relative;
 }
 
 /* make first image span 2 rows and columns to appear larger */
@@ -159,10 +161,24 @@ footer h2 {
     border: 3px solid var(--primary-color);
 }
 
-.work-img:hover {
+/* display heading on top of image */
+.work-img-heading-wrapper {
+    padding: 10px;
+    line-height: 1.3;
+    background-color: var(--primary-color);
+    display: inline-block;
+    position: absolute;
+    bottom: 20%;
+}
+
+.work-img-wrapper:hover .work-img {
     border-color: var(--secondary-color); 
 }
 
+.work-img-wrapper:hover .work-img-heading-wrapper{
+    background-color: var(--secondary-color);
+    color: var(--primary-color)
+}
 /* END Work styles */
 
 /* START Contact styles */
@@ -171,6 +187,7 @@ footer h2 {
     display: flex;
     justify-content: space-evenly;
 }
+/* END Contact styles */
 /* END Section styles */
 
 /* Media Query for Smaller Desktop Scrrens and Smaller */
@@ -215,10 +232,14 @@ footer h2 {
     /* Vertically stack section titles and content when screen width less than 768px */
     .section-title {
         flex: 1 100%;
+        padding-bottom: 5px;
     }
 
     .content-wrapper {
         flex: 2 100%;
+        border-left: none;
+        border-top: 3px solid var(--primary-color);
+        padding-top: 10px;
     }
 
     /* change grid to have two columns instead of 3 */
@@ -239,7 +260,6 @@ footer h2 {
     .work-img-wrapper h3, .work-img-wrapper h4 {
         margin-bottom: 10px;
     } 
-
 }
 
 /* Media Query for Mobile Phones and Smaller */
