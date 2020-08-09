@@ -90,11 +90,45 @@ footer h2 {
 }
 /* END Footer styles */
 
-/* START About Me styles */
+/* START Section styels */
+.portfolio-wrapper {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.section-title {
+    /* Give section titles 20% of vp width */
+    flex: 1 20%;
+    text-align: center;
+}
+
+.content-wrapper {
+    /* Give section content 80% vp width */
+    flex: 12 80%;
+    margin-top: 20px;
+}
+
+/* START About Me styles */
+.about-section .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-text-wrapper {
+    padding: 15px;
+    margin: 10px;
+}
+
+.about-text-wrapper p {
+    margin-bottom: 10px;
+}
 
 .about-img{
     width: 200px;
+    border-radius: 25px;
 }
 /* END About Me styles */
 
@@ -102,6 +136,8 @@ footer h2 {
 .work-img {
     width: 200px;
 }
+/* END Work styles */
+/* END Section styles */
 
 /* Media Query for Smaller Desktop Scrrens and Smaller */
 @media screen and (max-width: 980px){
@@ -141,6 +177,15 @@ footer h2 {
     section {
         padding: 30px 15px;
     }
+    /* Vertically stack section titles and content when screen width less than 768px */
+    .section-title {
+        flex: 1 100%;
+    }
+
+    .content-wrapper {
+        flex: 2 100%;
+    }
+
 }
 
 /* Media Query for Mobile Phones and Smaller */
