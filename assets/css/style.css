@@ -103,6 +103,7 @@ footer h2 {
     /* Give section titles 20% of vp width */
     flex: 1 20%;
     text-align: center;
+    /* border-right: 3px solid var(--primary-color); */
 }
 
 .content-wrapper {
@@ -139,20 +140,27 @@ footer h2 {
 /* START Work styles */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .work-img-wrapper {
-    grid-column: span 2;
+    grid-column: span 1;
 }
 
+/* make first image span 2 rows and columns to appear larger */
 .work-img-wrapper:first-child{
-    grid-column: span 3;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 .work-img {
     width: 95%;
+    border: 3px solid var(--primary-color);
+}
+
+.work-img:hover {
+    border-color: var(--secondary-color); 
 }
 
 /* END Work styles */
@@ -213,6 +221,7 @@ footer h2 {
         flex: 2 100%;
     }
 
+    /* change grid to have two columns instead of 3 */
     .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -227,6 +236,10 @@ footer h2 {
         grid-column: span 2;
     }
 
+    .work-img-wrapper h3, .work-img-wrapper h4 {
+        margin-bottom: 10px;
+    } 
+
 }
 
 /* Media Query for Mobile Phones and Smaller */
@@ -235,21 +248,25 @@ footer h2 {
         min-width: 150px; 
     }
 
+    /* change grid to have one column */
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
-        /* grid-template-rows: repeat(2, 1fr); */
     }
     
+    /* make work images 80% to appear smaller than first chilc */
     .work-img-wrapper {
         grid-column: span 1;
         width: 80%;
         margin: 0 auto;
     }
     
+    /* make first child 100% to appear larger. Set grid row to span 1 to overright earlier rule */
     .work-img-wrapper:first-child{
         grid-column: span 1;
         width: 100%;
+        grid-row: span 1;
+        margin: 0 auto;
     }
 
 }
