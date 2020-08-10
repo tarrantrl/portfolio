@@ -1,6 +1,6 @@
 :root {
     --primary-color: #46e8d8;
-    --secondary-color: #0e0238;
+    --secondary-color: #180657;
     --tertiary-color: white;
 }
 
@@ -85,7 +85,7 @@ footer h2 {
 }
 /* END Footer styles */
 
-/* START Section styels */
+/* START Section styles */
 .portfolio-wrapper {
     margin: 20px;
     display: flex;
@@ -108,9 +108,28 @@ footer h2 {
     border-left: 3px solid var(--primary-color);
 }
 
-#contact-me .content-wrapper{
-    line-height: 1.5;
+/* START Hero styles */
+.hero {
+    background-image: url("../images/PortfolioHero.PNG");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    background-attachment: fixed;
+    background-position: 80%;
+    height: 200px;
 }
+
+.hero-content{
+    background-color: var(--tertiary-color);
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+/* END Hero styles */
 
 /* START About Me styles */
 .about-section .content-wrapper {
@@ -186,6 +205,11 @@ footer h2 {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+}
+
+
+.contact-section .content-wrapper{
+    line-height: 1.5;
 }
 /* END Contact styles */
 /* END Section styles */
